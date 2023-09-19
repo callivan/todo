@@ -1,0 +1,43 @@
+{
+  "name": "book-bag",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "npm i && vite",
+    "build": "tsc && vite build",
+    "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@reduxjs/toolkit": "^1.9.5",
+    "classnames": "^2.3.2",
+    "normalize.css": "^8.0.1",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-helmet-async": "^1.3.0",
+    "react-redux": "^8.1.2",
+    "sass": "^1.67.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.2.5",
+    "@types/react": "^18.2.9",
+    "@types/react-dom": "^18.2.4",
+    "@typescript-eslint/eslint-plugin": "^6.6.0",
+    "@typescript-eslint/parser": "^6.6.0",
+    "@vitejs/plugin-react": "^4.0.0",
+    "autoprefixer": "^10.4.15",
+    "eslint": "^8.49.0",
+    "eslint-plugin-prettier": "^5.0.0",
+    "eslint-plugin-react": "^7.33.2",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "eslint-plugin-react-refresh": "^0.4.3",
+    "eslint-plugin-simple-import-sort": "^10.0.0",
+    "eslint-plugin-sonarjs": "^0.21.0",
+    "postcss": "^8.4.29",
+    "prettier": "^3.0.3",
+    "tailwindcss": "^3.3.3",
+    "typescript": "^5.1.3",
+    "vite": "^4.3.9"
+  }
+}

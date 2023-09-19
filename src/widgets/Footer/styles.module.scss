@@ -1,0 +1,9 @@
+.wrapper {
+    @apply w-full h-max;
+    @apply flex items-center justify-center;
+    @apply px-3 pt-3;
+    //Tablet small
+    @apply md:px-2 md:pt-2;
+    //Mobile big
+    @apply s:px-1;
+}

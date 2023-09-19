@@ -1,0 +1,12 @@
+.container {
+    @apply w-full h-full;
+    @apply flex items-center justify-center;
+}
+
+.text {
+    @apply font-medium;
+    //Tablet small
+    @apply md:text-body2;
+    //Mobile big
+    @apply s:text-body3;
+}

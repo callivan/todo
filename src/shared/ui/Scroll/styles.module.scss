@@ -1,0 +1,35 @@
+.scroll {
+  @apply w-full h-full;
+  @apply overflow-auto;
+  @apply mr-1;
+
+  &[data-scroll='false'] {
+    @apply overflow-hidden;
+  }
+
+  @media screen and not (hover: none) {
+    & {
+      scrollbar-width: thin;
+      scrollbar-color: #aec0c7 transparent;
+    }
+
+    &::-webkit-scrollbar {
+      width: 6px;
+      height: 6px;
+    }
+
+    &::-webkit-scrollbar-track {
+      background-color: transparent;
+      margin-block: 4px;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background-color: #aec0c7;
+      border-radius: 10px;
+    }
+  }
+}
+
+.container {
+  @apply w-full h-full;
+}

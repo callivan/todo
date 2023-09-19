@@ -1,0 +1,26 @@
+module.exports = {
+  root: true,
+  env: { browser: true, es2020: true },
+  extends: [
+    'eslint:recommended',
+    'plugin:@typescript-eslint/recommended',
+    'plugin:react-hooks/recommended',
+    'plugin:sonarjs/recommended',
+  ],
+  ignorePatterns: ['dist', '.eslintrc.cjs'],
+  parser: '@typescript-eslint/parser',
+  plugins: ['react-refresh', 'prettier', 'sonarjs', 'simple-import-sort'],
+  rules: {
+    'simple-import-sort/imports': 'error',
+    'prettier/prettier': 'error',
+    'sonarjs/no-duplicate-string': 'warn',
+    '@typescript-eslint/no-unused-vars': 'warn',
+    'no-unused-vars': 'warn',
+    'no-console': 'warn',
+    '@typescript-eslint/no-explicit-any': 'warn',
+    'react-refresh/only-export-components': ['warn', { allowConstantExport: true }],
+    'sonarjs/no-nested-template-literals': 'warn',
+    'sort-imports': 'off',
+    'import/order': 'off',
+  },
+};

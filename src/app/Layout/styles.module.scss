@@ -1,0 +1,31 @@
+.wrapper {
+    @apply relative;
+    @apply flex flex-col;
+    @apply w-full max-w-[1024px] h-full;
+    @apply bg-black-50;
+    @apply backdrop-blur-sm bg-clip-padding shadow-thickness;
+    @apply rounded-3xl;
+    // Mobile small
+    @apply xs:rounded-none;
+    @apply px-2 py-3;
+    //Mobile small
+    @apply xs:p-1;
+    @apply z-[1];
+}
+
+.header {
+    @apply w-full h-max;
+    @apply flex-shrink-0;
+}
+
+.main {
+    @apply w-full;
+    @apply flex-grow;
+    @apply overflow-hidden;
+    @apply border-y border-gray-450;
+}
+
+.footer {
+    @apply w-full h-max;
+    @apply flex-shrink-0;
+}

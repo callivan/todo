@@ -1,0 +1,97 @@
+.accordion {
+    @apply min-h-[52px];
+    //Mobile big
+    @apply s:min-h-[46px];
+
+    @apply shadow-border rounded-xl;
+    @apply px-2 py-1;
+    @apply transition-all duration-200;
+
+    &[data-active='false'] {
+        @apply shadow-gray-450;
+    }
+
+    &[data-active='true'],
+    &[data-active='false']:hover {
+        @apply shadow-blue-450;
+    }
+
+    &__content {
+        @apply flex gap-1;
+        //Mobile big
+        @apply s:flex-col gap-1;
+
+        @apply w-full h-max;
+
+        &[data-stretch='false'] {
+            @apply items-center;
+            //Mobile big
+            @apply s:items-stretch;
+        }
+
+        &[data-stretch='true'] {
+            @apply items-stretch;
+        }
+    }
+
+    &__scroll {
+        @apply w-full max-h-[300px];
+        @apply pt-[7px];
+
+        & > div {
+            @apply w-full h-max;
+        }
+    }
+
+    &__text {
+        @apply text-body2;
+        //Mobile big
+        @apply s:text-body3;
+
+        &[data-active='false'] {
+            @apply text-gray-450;
+        }
+
+        &[data-active='true'] {
+            @apply text-blue-450;
+        }
+    }
+}
+
+.placeholder {
+    @apply flex items-center gap-1;
+    @apply w-full h-full;
+    @apply px-2 py-1;
+
+    &__text {
+        @apply w-full h-max;
+        @apply text-body2 truncate;
+        //Mobile big
+        @apply s:text-body3;
+    }
+}
+
+.actions {
+    @apply flex items-start flex-shrink-0 gap-1;
+    @apply pl-1;
+    //Mobile big
+    @apply s:pl-[0px] s:pt-1;
+
+    @apply border-l;
+    //Mobile big
+    @apply s:border-t s:border-l-0;
+
+    @apply transition-colors duration-200;
+
+    &[data-active='false'] {
+        @apply border-gray-450;
+    }
+
+    &[data-active='true'] {
+        @apply border-blue-450;
+    }
+
+    & > .button {
+        @apply flex-shrink-0;
+    }
+}

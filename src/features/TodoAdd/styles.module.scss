@@ -1,0 +1,12 @@
+.form {
+    @apply flex items-end gap-1;
+    @apply max-w-[450px] w-full;
+}
+
+.textarea {
+    @apply w-full;
+}
+
+.button {
+    @apply flex-shrink-0;
+}

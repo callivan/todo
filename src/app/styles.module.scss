@@ -1,0 +1,14 @@
+.wrapper {
+    @apply flex items-center justify-center;
+    @apply relative;
+    @apply w-screen h-screen;
+    @apply px-3 py-5;
+    //Tablet big
+    @apply lg:py-4;
+    //Tablet small
+    @apply md:px-2 md:py-3;
+    //Mobile big
+    @apply s:px-1 s:py-2;
+    //Mobile small
+    @apply xs:px-[0px] xs:py-[0px];
+}

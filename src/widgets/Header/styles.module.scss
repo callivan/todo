@@ -1,0 +1,23 @@
+.header {
+    @apply w-full h-max;
+    @apply flex items-center justify-between flex-wrap gap-1;
+    @apply px-3 pb-3;
+    //Tablet small
+    @apply md:px-2 md:pb-2;
+    //Mobile big
+    @apply s:px-1;
+}
+
+.counter {
+    @apply font-medium;
+    //Tablet small
+    @apply md:text-body2;
+    //Mobile big
+    @apply s:text-body3;
+    
+    @apply flex-shrink-0 flex-grow;
+}
+
+.wrapper {
+    @apply flex items-center justify-between flex-wrap flex-grow;
+}

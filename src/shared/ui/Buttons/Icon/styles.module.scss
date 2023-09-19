@@ -1,0 +1,41 @@
+.button {
+  @apply rounded-xl;
+  @apply text-gray-450;
+  @apply shadow-border;
+  @apply transition-colors duration-200;
+  @apply flex items-start justify-center;
+
+  &[data-size='sm'] {
+    @apply w-[30px] h-[30px] px-0.5 py-0.5 rounded-[9px];
+  }
+
+  &[data-size='md'] {
+    @apply w-[36px] h-[36px] px-[6px] py-[6px];
+  }
+
+  &[data-size='lg'] {
+    @apply w-[40px] h-[40px] px-1 py-1;
+  }
+
+  &[data-active='true'] {
+    @apply shadow-blue-450 text-black-900 bg-blue-450;
+  }
+
+  &[data-active='false'] {
+    &:hover {
+      @apply bg-gray-450 text-black-900 shadow-gray-450;
+    }
+
+    &:active {
+      @apply bg-blue-450 text-black-900 shadow-blue-450;
+    }
+  }
+
+  &[data-active='false'],
+  &[data-active='true'] {
+    &:disabled {
+      @apply cursor-default pointer-events-none;
+      @apply bg-transparent text-gray-900 shadow-gray-900;
+    }
+  }
+}
