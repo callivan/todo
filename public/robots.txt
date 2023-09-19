@@ -1,4 +1,4 @@
 User-agent: *
 Allow /
 Disallow: /*
-Sitemap: http://localhost:4173/sitemap.xml
+Sitemap: https://todo-red-two.vercel.app/sitemap.xml
