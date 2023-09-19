@@ -8,7 +8,7 @@ function renderChunks(deps: Record<string, string>) {
   const chunks = {};
 
   Object.keys(deps).forEach((key) => {
-    if (['react', 'react-router-dom', 'react-dom'].includes(key)) return;
+    if (['react', 'react-dom'].includes(key)) return;
     chunks[key] = [key];
   });
   return chunks;
@@ -35,7 +35,7 @@ export default defineConfig({
       output: {
         entryFileNames: '[name].js',
         manualChunks: {
-          vendor: ['react', 'react-router-dom', 'react-dom'],
+          vendor: ['react', 'react-dom'],
           ...renderChunks(dependencies),
         },
       },
