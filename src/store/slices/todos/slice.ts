@@ -9,7 +9,7 @@ const initialState: IInitialState = {
   filter: null,
 };
 
-const todosSlice = createSlice({
+export const todosSlice = createSlice({
   name: 'todos',
   initialState,
   reducers: {

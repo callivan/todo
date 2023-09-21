@@ -32,6 +32,7 @@ export default defineConfig({
   },
   build: {
     rollupOptions: {
+      external: ['**/*.test.*', '**/__mocks__/*', '**/__tests__/*'],
       output: {
         entryFileNames: '[name].js',
         manualChunks: {

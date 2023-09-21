@@ -7,6 +7,6 @@ export {
   addEditTodo,
   deleteEditTodo,
   setFilter,
-} from './todo';
+} from './slice';
 
 export { useGetTodos, useGetEditTodo, useGetFilter } from './selectors';
