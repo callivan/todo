@@ -1,7 +1,7 @@
 type TTextarea = React.ComponentPropsWithRef<'textarea'>;
 
 interface ITextareaOwnProps {
-  form: HTMLFormElement | null;
+  form?: HTMLFormElement | null;
   maxHeight?: number;
   size?: 'lg' | 'md' | 'sm';
   cleaner?: {

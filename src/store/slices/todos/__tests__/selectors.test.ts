@@ -11,7 +11,7 @@ describe('Testing todos selectors', () => {
     editTodo: null,
   };
 
-  it('Testing "getTodosByFilter" selector with "null" filter', () => {
+  it('Testing "getTodosByFilter" selector without filter', () => {
     expect(getTodosByFilter(initState)).toHaveLength(2);
   });
 

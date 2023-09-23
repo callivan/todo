@@ -114,15 +114,15 @@ interface IActionsProps extends ICommonProps {}
 function Actions({ completed, isActive, size, onCompleted, onDelete, onEdit }: IActionsProps) {
   return (
     <div data-active={isActive} className={styles.actions}>
-      <ButtonIcon isActive={completed} size={size} onClick={onCompleted}>
+      <ButtonIcon data-testid="completed" isActive={completed} size={size} onClick={onCompleted}>
         <IconCheck width="100%" height="100%" />
       </ButtonIcon>
 
-      <ButtonIcon disabled={completed} size={size} onClick={onEdit}>
+      <ButtonIcon data-testid="edited" disabled={completed} size={size} onClick={onEdit}>
         <IconEdit width="100%" height="100%" />
       </ButtonIcon>
 
-      <ButtonIcon size={size} onClick={onDelete}>
+      <ButtonIcon data-testid="deleted" size={size} onClick={onDelete}>
         <IconCross width="100%" height="100%" />
       </ButtonIcon>
     </div>

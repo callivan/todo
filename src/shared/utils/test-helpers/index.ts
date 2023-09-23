@@ -1,0 +1,1 @@
+export { renderWithRedux } from './renderWithRedux';

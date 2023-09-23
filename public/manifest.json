@@ -1,6 +1,6 @@
 {
-    "name": "Todo",
-    "short_name": "Todo",
+    "name": "Todos",
+    "short_name": "Todos",
     "theme_color": "#3e3e3e",
     "background_color": "#3e3e3e",
     "display": "browser",

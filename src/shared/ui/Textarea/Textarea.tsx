@@ -5,7 +5,7 @@ import styles from './styles.module.scss';
 import { TTextareaProps } from './types/component';
 
 export const Textarea = forwardRef<HTMLTextAreaElement, TTextareaProps>(function Textarea(
-  { form, cleaner, value, className, maxHeight = 100, size = 'lg', onChange, ...props },
+  { form = null, cleaner, value, className, maxHeight = 100, size = 'lg', onChange, ...props },
   ref,
 ) {
   const containerRef = useRef<HTMLDivElement | null>(null);
@@ -56,7 +56,13 @@ export const Textarea = forwardRef<HTMLTextAreaElement, TTextareaProps>(function
       </div>
 
       {value && cleaner && (
-        <button data-size={size} onClick={cleaner.onClean} className={styles.button}>
+        <button
+          data-size={size}
+          data-testid="cross-button"
+          type="button"
+          onClick={cleaner.onClean}
+          className={styles.button}
+        >
           {cleaner.icon}
         </button>
       )}

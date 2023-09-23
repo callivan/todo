@@ -9,4 +9,6 @@ export {
   setFilter,
 } from './slice';
 
+export type { IInitialState } from './types';
+
 export { useGetTodos, useGetEditTodo, useGetFilter } from './selectors';

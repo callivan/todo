@@ -74,7 +74,7 @@ export function TodoAdd() {
         className={styles.textarea}
       />
 
-      <ButtonIcon type="submit" size={size} className={styles.button}>
+      <ButtonIcon data-testid="submit-button" type="submit" size={size} className={styles.button}>
         <IconPlus width="100%" height="100%" />
       </ButtonIcon>
     </form>

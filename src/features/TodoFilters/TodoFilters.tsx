@@ -27,11 +27,17 @@ export function TodoFilters() {
 
   return (
     <div className={styles.wrapper}>
-      <ButtonText isActive={!filter} size={size} onClick={handleChangeFilter}>
+      <ButtonText
+        data-testid="all-filter"
+        isActive={!filter}
+        size={size}
+        onClick={handleChangeFilter}
+      >
         All
       </ButtonText>
 
       <ButtonText
+        data-testid="active-filter"
         name={EFilters.ACTIVE}
         isActive={filter === EFilters.ACTIVE}
         size={size}
@@ -41,6 +47,7 @@ export function TodoFilters() {
       </ButtonText>
 
       <ButtonText
+        data-testid="completed-filter"
         name={EFilters.COMPLETED}
         isActive={filter === EFilters.COMPLETED}
         size={size}

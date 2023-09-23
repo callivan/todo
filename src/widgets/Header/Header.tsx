@@ -25,7 +25,7 @@ export function Header() {
 
   return (
     <div className={styles.header}>
-      <Text className={styles.counter}>{`${todos.length} items left`}</Text>
+      <Text data-testid="counter" className={styles.counter}>{`${todos.length} items left`}</Text>
 
       <div className={styles.wrapper}>
         <TodoFilters />
