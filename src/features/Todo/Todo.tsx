@@ -60,8 +60,8 @@ export function Todo(props: ITodoProps) {
   };
 
   useEffect(() => {
-    off();
-  }, []);
+    isMobileBig ? setOff(false) : off();
+  }, [isMobileBig]);
 
   return (
     <Accordion
