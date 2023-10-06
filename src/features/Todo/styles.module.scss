@@ -1,3 +1,30 @@
+@keyframes add {
+    0% {
+        opacity: 0;
+    }
+
+    20% {
+        transform: translateX(16px);
+    }
+
+    100% {
+        transform: translateX(0px);
+        opacity: 1;
+    }
+}
+
+@keyframes delete {
+    0% {
+        transform: translateX(0px);
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateX(-16px);
+        opacity: 0;
+    }
+}
+
 .accordion {
     @apply min-h-[52px];
     //Mobile big
@@ -6,6 +33,14 @@
     @apply shadow-border rounded-xl;
     @apply px-2 py-1;
     @apply transition-all duration-200;
+
+    &[data-deleted='false'] {
+        animation: add 0.15s ease-in-out forwards;
+    }
+
+    &[data-deleted='true'] {
+        animation: delete 0.15s ease-in-out forwards;
+    }
 
     &[data-active='false'] {
         @apply shadow-gray-450;

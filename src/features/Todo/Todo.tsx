@@ -1,5 +1,5 @@
 import { IconCheck, IconCross, IconEdit } from '@shared/icons';
-import { Accordion, ButtonIcon, Scroll, Text } from '@shared/ui';
+import { Accordion, ButtonIcon, IAccordionRefProps, Scroll, Text } from '@shared/ui';
 import { useMatchMedia } from '@shared/utils';
 import { addEditTodo, deleteTodo, updateTodo, useDispatchTyped } from '@store';
 import { useEffect, useRef, useState } from 'react';
@@ -14,6 +14,7 @@ export function Todo(props: ITodoProps) {
   const [isOff, setOff] = useState<boolean>(false);
 
   const contentRef = useRef<HTMLDivElement | null>(null);
+  const accordionRef = useRef<IAccordionRefProps | null>(null);
 
   const { isMobileBig } = useMatchMedia({ queries: { isMobileBig: '(max-width: 595px)' } });
 
@@ -28,12 +29,26 @@ export function Todo(props: ITodoProps) {
     setOff(contentHeight <= stringHeight);
   };
 
+  const deleted = () => {
+    setTimeout(() => {
+      dispatch(deleteTodo(props.id));
+    }, 100);
+  };
+
   const handleCompleted = () => {
     dispatch(updateTodo({ id: props.id, text: props.text, completed: !props.completed }));
   };
 
   const handleDelete = () => {
-    dispatch(deleteTodo(props.id));
+    if (!accordionRef.current) return;
+
+    const accordion = accordionRef.current.ref().current;
+
+    if (!accordion) return;
+
+    accordion.setAttribute('data-deleted', 'true');
+
+    accordion.addEventListener('animationend', deleted, { once: true });
   };
 
   const handleEdit = () => {
@@ -50,6 +65,8 @@ export function Todo(props: ITodoProps) {
 
   return (
     <Accordion
+      ref={accordionRef}
+      data-deleted={false}
       data-active={isActive}
       className={styles.accordion}
       isOff={isOff}

@@ -10,7 +10,7 @@ interface IAccordionOwnProps {
 }
 
 export interface IAccordionRefProps {
-  ref: () => HTMLDivElement | null;
+  ref: () => React.MutableRefObject<HTMLDivElement | null>;
 }
 
 export type TAccordionProps = Omit<TDiv, keyof IAccordionOwnProps> & IAccordionOwnProps;

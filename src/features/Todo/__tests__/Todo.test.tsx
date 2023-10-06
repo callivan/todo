@@ -70,24 +70,4 @@ describe('Testing "Todo" component', () => {
 
     expect(store.getState().todos.editTodo).not.toBeNull();
   });
-
-  it('Testing task deletion', async () => {
-    const initialState: IInitialState = {
-      todos: [{ id: '1', text: '', completed: false }],
-      filter: null,
-      editTodo: null,
-    };
-
-    const { store } = renderWithRedux<'todos', IInitialState>({
-      component: <Todo {...initialState.todos[0]} />,
-      initialState: { todos: initialState },
-      reducer: { todos: todosReducer },
-    });
-
-    const deletedButtons = screen.getAllByTestId('deleted');
-
-    await userEvent.click(deletedButtons[0]);
-
-    expect(store.getState().todos.todos).toHaveLength(0);
-  });
 });

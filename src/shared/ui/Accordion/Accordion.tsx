@@ -67,7 +67,7 @@ export const Accordion = forwardRef<IAccordionRefProps, TAccordionProps>(functio
   useImperativeHandle(
     ref,
     () => ({
-      ref: () => accordionRef.current,
+      ref: () => accordionRef,
     }),
     [accordionRef.current],
   );
